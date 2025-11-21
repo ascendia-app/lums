@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMS Admission Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-4xl">
+    <h1 class="text-4xl font-bold text-center mb-8 text-purple-700">LUMS Admission Calculator</h1>
+
+    <form id="calcForm" class="space-y-6">
+
+      <!-- SUBJECTS -->
+      <div id="subjectsSection">
+        <h2 class="text-xl font-semibold mb-2 text-gray-700">Subjects</h2>
+        <div class="subject-entry flex gap-2 mb-2">
+          <select name="subject_type" class="border p-2 rounded w-1/4">
+            <option value="O-Level">O-Level</option>
+            <option value="A-Level">A-Level</option>
+            <option value="Matric">Matric</option>
+            <option value="FSC">FSC</option>
+          </select>
+          <input type="text" name="subject_name" placeholder="Subject Name" class="border p-2 rounded w-1/4">
+          <select name="subject_grade" class="border p-2 rounded w-1/4">
+            <option value="A*">A*</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+          </select>
+          <button type="button" class="remove-subject bg-red-500 text-white px-3 rounded hover:bg-red-600 transition">Remove</button>
+        </div>
+      </div>
+      <button type="button" id="addSubject" class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition">Add Subject</button>
+
+      <!-- SAT -->
+      <div>
+        <label class="block font-semibold text-gray-700">SAT Score</label>
+        <input type="number" name="sat" placeholder="e.g. 1480" class="border p-2 rounded w-full">
+      </div>
+
+      <!-- EXTRACURRICULARS -->
+      <div id="ecaSection">
+        <h2 class="text-xl font-semibold mb-2 text-gray-700">Extracurriculars</h2>
+        <div class="eca-entry flex gap-2 mb-2">
+          <select name="eca_type" class="border p-2 rounded w-1/4">
+            <option value="Academic">Academic</option>
+            <option value="Sports">Sports</option>
+            <option value="International">International</option>
+            <option value="Creative">Creative</option>
+            <option value="Community">Community</option>
+            <option value="Other">Other</option>
+          </select>
+          <select name="eca_level" class="border p-2 rounded w-1/4">
+            <option value="School">School</option>
+            <option value="City">City</option>
+            <option value="National">National</option>
+            <option value="International">International</option>
+          </select>
+          <input type="text" name="eca_field" placeholder="Field / Discipline" class="border p-2 rounded w-1/4">
+          <input type="text" name="eca_notes" placeholder="Notes / Free Text" class="border p-2 rounded w-1/4">
+          <button type="button" class="remove-eca bg-red-500 text-white px-3 rounded hover:bg-red-600 transition">Remove</button>
+        </div>
+      </div>
+      <button type="button" id="addECA" class="bg-green-500 text-white px-5 py-2 rounded hover:bg-green-600 transition">Add ECA</button>
+
+      <button type="submit" class="bg-purple-600 text-white w-full p-3 rounded hover:bg-purple-700 transition">Calculate</button>
+    </form>
+
+    <div id="result" class="mt-6 bg-purple-50 p-4 rounded text-gray-800 font-medium text-lg">
+      Your total score and AI analysis will appear here.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

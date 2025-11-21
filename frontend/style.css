@@ -1,0 +1,9 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.subject-entry, .eca-entry {
+  transition: all 0.2s ease;
+}
+.subject-entry:hover, .eca-entry:hover {
+  transform: scale(1.02);
+}
