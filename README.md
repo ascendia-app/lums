@@ -1,1 +1,1 @@
-# lums
+# LUMS Admission Calculator
